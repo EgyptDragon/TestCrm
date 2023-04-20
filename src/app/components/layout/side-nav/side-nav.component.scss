@@ -1,0 +1,28 @@
+::ng-deep .mat-form-field-wrapper{
+    margin:0!important;
+    padding:0!important;
+    margin-bottom:16px!important;
+}
+.results-count-container{
+    border-bottom: 1px solid #eee;
+    padding: 16px;
+    p{
+        margin:0;
+        font-weight:600;
+        color:rgba(0,0,0,0.5);
+    }
+}
+
+.search-container{
+    padding:16px;
+    mat-form-field{
+        width: 100%;
+    }
+    mat-radio-group{
+        display: flex;
+        flex-direction: column;
+        mat-radio-button{
+            margin-bottom:8px;
+        }
+    }
+}

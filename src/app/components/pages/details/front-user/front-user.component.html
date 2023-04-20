@@ -1,0 +1,89 @@
+<section>
+    <div class="left-column-container">
+        <h2>
+            <mat-icon fontSet="material-icons-outlined">account_circle</mat-icon>
+            Informations
+        </h2>
+        <div class="infos-block-container">
+            <div style="display: flex;align-items: center;">
+                <span style="    border-radius: 1000px;
+                height: 56px;
+                width: 56px;
+                background: #e0e0e0;
+                color: black;
+                font-weight: 800;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+                letter-spacing: .0892857143em;
+                margin-right:24px;
+                font-size:1.2em;">VL</span>
+                <div style="display: flex;flex-direction: column;">
+                    <h3 style="    display: flex;
+                    flex-direction: column;margin:0;line-height: 1em;"><label class="mat-caption" style="margin-right:8px">Prénom</label>Vincent</h3>
+                    <h3 style="    display: flex;
+                    flex-direction: column;margin:0;line-height: 1em;"><label class="mat-caption" style="margin-right:8px">Nom</label>LEVEQUE</h3>
+                </div>
+            </div>
+            <span style="    background: rgba(0,0,0,0.05);
+            height: 48px;
+            width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: 600;"><img style="    width: 18px;
+    padding-right: 2px;" src="/assets/images/app-ruby.svg" alt="Mon compteur de rubis" height="28px" width="28px">10</span>
+        </div>
+
+        <h2>
+            <mat-icon fontSet="material-icons-outlined">verified</mat-icon>
+            Abonnements
+        </h2>
+        <div class="infos-block-container">
+
+            <!-- <span>Aucun abonnement.</span> -->
+            <div class="options-chips-group">
+                <span class="option-chip">Premium</span>
+                <span class="option-chip">Prof en ligne</span>
+                <span class="option-chip">Contrôles corrigés</span>
+                <span class="option-chip">Assistance parents</span>
+
+            </div>
+        </div>
+
+        <h2>
+            <mat-icon fontSet="material-icons-outlined">info</mat-icon>
+            Détails
+        </h2>
+        <div class="infos-block-container">
+            <div class="details-container" style="display:flex;flex-direction: column;max-width:50%;">
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">ID</label>
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">Email</label>
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">Type de compte</label>
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">Niveau</label>
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">Crée le</label>
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">Bloqué</label>
+                <label style="color:rgba(0,0,0,0.7);font-weight:500;text-transform: uppercase;">Activé</label>
+            </div>
+            <div style="display:flex;flex-direction: column;max-width:50%;">
+                <span >12345678</span>
+                <input #emailRef readonly (click)="click()" type="text" id="text-box" size="20" value="vincent@gmailvincent@gmailvincent@gmailvincent@gmailvincent@gmail.com">
+<!-- 
+                <span #emailRef (click)="click()" matTooltip="Info about the action" title="vincent@gmailvincent@gmailvincent@gmailvincent@gmailvincent@gmail.com" style="text-overflow: ellipsis;
+                overflow: hidden;">{{email}}</span> -->
+                <span>Etudiant</span>
+                <span>Terminale</span>
+                <span>12/07/07</span>
+                <span>Oui</span>
+                <span>Non</span>
+            </div>
+        </div>
+    </div>
+    <div class="right-column-container">
+
+    </div>
+</section>
+

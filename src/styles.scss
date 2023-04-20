@@ -1,0 +1,114 @@
+// :root {
+//     --kar-primary: #2665ff;
+//     --kar-primary-rgb: 38, 192, 255;
+//     --kar-secondary: #04d75d;
+//     --kar-secondary-rgb: 4, 215, 93;
+//     --kar-danger: #ef5350;
+//     --kar-danger-rgb: 239, 83, 80;
+//     --kar-shark: #585f74;
+//     --kar-shark-rgb: 88, 95, 116;
+//     --kar-dark: #969ba8;
+//     --kar-medium: #c0c3ca;
+//     --kar-light: #e0e1e5;
+//     --kar-lighter: #f2f4f7;
+//     --kar-separation: #dddddd;
+
+//     --kar-background: #fbfcfd;
+//     // --kar-dark-gray: rgb(90, 94, 101);
+//     // --kar-dark-gray-rgb: 90, 94, 101;
+//     // --kar-medium-gray: rgb(118, 121, 124);
+//     // --kar-medium-gray-rgb: 118, 121, 124;
+//     // --kar-light-gray: rgb(244, 244, 246);
+//     // --kar-light-gray-rgb: 244, 244, 246;
+// }
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+@import "./theme.scss";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$FrontCRM-primary: mat-palette($mat-gray, 50);
+$FrontCRM-accent: mat-palette($kar-accent-map);
+
+// The warn palette is optional (defaults to red).
+$FrontCRM-warn: mat-palette($kar-danger-map);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$FrontCRM-theme: mat-light-theme($FrontCRM-primary, $FrontCRM-accent, $FrontCRM-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($FrontCRM-theme);
+
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--kar-background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.button{
+    // font-family: Roboto, sans-serif;
+    // -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: .0892857143em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 8px 0 8px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    border: none;
+    outline: none;
+    line-height: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    overflow: visible;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+.button--outlined{
+    border: 1px solid #466fff!important;
+}

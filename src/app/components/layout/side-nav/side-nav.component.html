@@ -1,0 +1,70 @@
+<section class="results-count-container">
+    <p class="mat-caption">{{itemsCount}} résultats.</p>
+</section>
+
+<section class="search-container" *ngIf="isFrontUserList">
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Rechercher</mat-label>
+        <input matInput placeholder="Rechercher" type="text">
+        <mat-icon fontSet="material-icons-outlined" matSuffix *ngIf="frontUserSearchType==='idOrMail'">account_circle</mat-icon>
+        <mat-icon fontSet="material-icons-outlined" matSuffix *ngIf="frontUserSearchType==='bill'">receipt_long</mat-icon>
+    </mat-form-field>
+    <div>
+        <mat-radio-group [(ngModel)]="frontUserSearchType">
+          <mat-radio-button value="idOrMail">Par Id ou email</mat-radio-button>
+          <mat-radio-button value="bill">Par N° de facture</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div class="search-buttons-container" style="display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;margin-top:24px;">
+        <button class="button button--outlined" style="margin-right:4px;" mat-stroked-button color="accent" type="submit">Rechercher</button>
+        <button class="button" style="flex:1;margin-left:4px;" mat-button type="submit">Effacer</button>
+    </div>
+
+</section>
+
+<section class="search-container" *ngIf="isParentContactList">
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Parent contact</mat-label>
+        <input matInput placeholder="Parent contact" type="text">
+        <mat-icon fontSet="material-icons-outlined" matSuffix>supervised_user_circle</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Email enfant</mat-label>
+        <input matInput placeholder="Email enfant" type="text">
+        <mat-icon fontSet="material-icons-outlined" matSuffix>contact_mail</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Téléphone enfant</mat-label>
+        <input matInput placeholder="Téléphone enfant" type="text">
+        <mat-icon fontSet="material-icons-outlined" matSuffix>contact_phone</mat-icon>
+    </mat-form-field>
+
+    <p class="mat-caption">Préciser un statut</p>
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Statut</mat-label>
+        <mat-select [(ngModel)]="status">
+            <mat-option value="">Aucun</mat-option>
+            <mat-option *ngFor="let status of statusList" value="status">{{ status }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p class="mat-caption">Préciser une source</p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Source</mat-label>
+        <mat-select [(ngModel)]="source">
+            <mat-option value="">Aucune</mat-option>
+            <mat-option *ngFor="let source of sources" value="source">{{ source }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div style="display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;margin-top:24px;">
+          <button class="button button--outlined" style="margin-right:4px;" mat-stroked-button color="accent" type="submit">Rechercher</button>
+          <button class="button" style="flex:1;margin-left:4px;" mat-button type="submit">Effacer</button>
+      </div>
+</section>
